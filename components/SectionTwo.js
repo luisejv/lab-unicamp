@@ -38,7 +38,7 @@ const SectionTwo = () => {
             </Col>
           </Row>
         ))}
-        <Link href="/">
+        <Link href="/research">
           <a className="textBlue1">See full list of projects</a>
         </Link>
       </Col>
@@ -69,7 +69,7 @@ const SectionTwo = () => {
             </p>
           </Col>
         </Row>
-        <Link href="/">
+        <Link href="/publications">
           <a className="textBlue1">See full list of publications</a>
         </Link>
       </Col>

@@ -24,6 +24,7 @@
 
 .navbarOption:hover {
   color: #0071b3;
+  text-decoration: underline;
 }
 
 .bannerContainer {
@@ -58,9 +59,9 @@
   font-size: 20px;
   color: white;
   background-color: transparent;
-  padding: 10px 40px;
+  padding: 13px 55px;
   z-index: 2;
-  margin: 0 5px;
+  margin: 0 7px;
 }
 
 .buttonBanner:hover {
@@ -142,9 +143,34 @@
   border-top: 1px solid #ebebeb;
 }
 
+.contactTitle {
+  font-size: 16px;
+}
+
+.contactContent {
+  font-size: 14px;
+}
+
+.contactLink {
+  font-size: 14px;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footerOption {
+  color: #0071b3;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 3px 0px;
+}
+
 .subfooter {
   background-color: #f4f5f2;
-  height: 350px;
+  height: 100%;
+  padding: 20px 0px;
 }
 
 .footer {

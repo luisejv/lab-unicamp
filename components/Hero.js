@@ -22,6 +22,7 @@ const Hero = () => {
             alt="banner"
             layout="fill"
             className={"heroImage"}
+            priority="true"
             onLoad={() => {
               setBannerText();
             }}
