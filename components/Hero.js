@@ -35,9 +35,9 @@ const Hero = () => {
                 </div>
               </Row>
               <Row className="w-100 justify-content-center bannerAnimation">
-                <ButtonBanner>Research</ButtonBanner>
-                <ButtonBanner>The Team</ButtonBanner>
-                <ButtonBanner>Publications</ButtonBanner>
+                <ButtonBanner anchor="/research">Research</ButtonBanner>
+                <ButtonBanner anchor="/people">The Team</ButtonBanner>
+                <ButtonBanner anchor="/publications">Publications</ButtonBanner>
               </Row>
             </React.Fragment>
           )}
