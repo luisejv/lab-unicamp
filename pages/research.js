@@ -1,6 +1,7 @@
-import React from "react";
-import Head from "next/head";
-import { Container } from "react-bootstrap";
+import React from 'react';
+import Head from 'next/head';
+import { Container } from 'react-bootstrap';
+import { DropdownItem } from '../components/DropdownItem';
 
 const Research = () => {
   return (
@@ -12,6 +13,9 @@ const Research = () => {
       </Head>
       <Container>
         <h1>Research</h1>
+        <Container>
+          <DropdownItem />
+        </Container>
       </Container>
     </>
   );
