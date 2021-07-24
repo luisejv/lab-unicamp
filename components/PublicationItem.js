@@ -1,9 +1,10 @@
-import React from 'react';
-import Styles from '../styles/Publication.module.css';
+import React from "react";
+import { Row } from "react-bootstrap";
+import Styles from "../styles/Publication.module.css";
 
 const PublicationItem = ({ title, cite, link }) => {
   return (
-    <section className={Styles.publication}>
+    <Row className={Styles.publication}>
       <a
         href={link}
         target="_blank"
@@ -13,7 +14,7 @@ const PublicationItem = ({ title, cite, link }) => {
         {title}
       </a>
       <div className={Styles.cite}>{cite}</div>
-    </section>
+    </Row>
   );
 };
 export default PublicationItem;

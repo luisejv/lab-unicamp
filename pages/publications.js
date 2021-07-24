@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Info } from "../info/publicationInfo";
 import PublicationItem from "../components/PublicationItem";
 const Publications = () => {
@@ -11,18 +11,22 @@ const Publications = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className="py-5">
+      <Container className="my-5">
         <h1>Publications</h1>
-        <section style={{ marginBottom: "60px" }}>
-          {Info.map((publi, idx) => (
-            <PublicationItem
-              key={idx}
-              title={publi.title}
-              cite={publi.cite}
-              link={publi.link}
-            />
-          ))}
-        </section>
+        <Container style={{ marginBottom: "60px" }}>
+          <Row>
+            <Col md={8}>
+              {Info.map((publi, idx) => (
+                <PublicationItem
+                  key={idx}
+                  title={publi.title}
+                  cite={publi.cite}
+                  link={publi.link}
+                />
+              ))}
+            </Col>
+          </Row>
+        </Container>
       </Container>
     </>
   );
