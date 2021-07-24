@@ -1,36 +1,11 @@
 import React from "react";
 import { Col, Row, Container } from "react-bootstrap";
-import Contact from "./Contact";
+import ContactFooter from "./ContactFooter";
 import Link from "next/link";
 import { FaTwitter, FaYoutube } from "react-icons/fa";
+import { contacts, options } from "../info/footerInfo";
 
 const Footer = () => {
-  const contacts = [
-    {
-      title: "Universidad de Campiñas' Lab",
-      address: "901 Schapiro CEPSR, 530 West 120th Street · New York, NY 10027",
-    },
-    {
-      title: "Assistant",
-      address:
-        "1001 Schapiro CEPSR, 530 West 120th Street · New York, NY 10027",
-    },
-    {
-      title: "Professor",
-      address:
-        "1006 Schapiro CEPSR, 530 West 120th Street · New York, NY 10027",
-    },
-  ];
-
-  const options = [
-    { name: "Research", href: "/research" },
-    { name: "Videos", href: "/videos" },
-    { name: "People", href: "/people" },
-    { name: "Publications", href: "/publications" },
-    { name: "Prospective Students", href: "/prospective-students" },
-    { name: "News", href: "/news" },
-    { name: "Contact Us", href: "/contact-us" },
-  ];
   return (
     <React.Fragment>
       <Container fluid className="subfooter">
@@ -38,9 +13,9 @@ const Footer = () => {
           <Row>
             <Col md={9}>
               <Row>
-                <Col>
+                <Col md={7}>
                   {contacts.map((contact, idx) => (
-                    <Contact
+                    <ContactFooter
                       type="marker"
                       key={"contact" + idx}
                       title={contact.title}
@@ -48,9 +23,13 @@ const Footer = () => {
                     />
                   ))}
                 </Col>
-                <Col className="text-center">
-                  <Contact type="phone" title={"Phone"} link={"212-853-0953"} />
-                  <Contact
+                <Col md={5} className="text-center">
+                  <ContactFooter
+                    type="phone"
+                    title={"Phone"}
+                    link={"212-853-0953"}
+                  />
+                  <ContactFooter
                     type="mail"
                     title={"Contact Us"}
                     link={"ml3745@unicamp.edu.br"}

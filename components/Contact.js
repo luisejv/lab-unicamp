@@ -1,30 +1,29 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
 
-const Contact = (props) => {
+const Contact = ({ charge, name, email, phone, office }) => {
   return (
-    <Row className="my-3">
-      <Col xs="auto" className="pt-1">
-        {props.type === "marker" && (
-          <FaMapMarkerAlt style={{ transform: "scale(1.5)" }} color="#555555" />
-        )}
-        {props.type === "phone" && (
-          <FaPhoneAlt style={{ transform: "scale(1.5)" }} color="#555555" />
-        )}
-        {props.type === "mail" && (
-          <GrMail style={{ transform: "scale(1.5)" }} color="#555555" />
-        )}
-      </Col>
-      <Col xs>
-        <Row className="contactTitle">{props.title}</Row>
-        {props.address && <Row className="contactContent">{props.address}</Row>}
-        {props.link && (
-          <Row as="a" className="contactLink">
-            {props.link}
+    <Row className="mb-5">
+      <Col>
+        <Row className="my-1">
+          <h4 style={{ color: "#00294a" }}>{charge}</h4>
+        </Row>
+        <Row className="my-1">
+          <strong>{name}</strong>
+        </Row>
+        {email && (
+          <Row className="my-1">
+            <strong className="mr-1">E-mail:</strong> <span>{email}</span>
           </Row>
         )}
+        {phone && (
+          <Row className="my-1">
+            <strong className="mr-1">Phone:</strong> <span>{phone}</span>
+          </Row>
+        )}
+        <Row className="my-1">
+          <strong className="mr-1">Office:</strong> <span>{office}</span>
+        </Row>
       </Col>
     </Row>
   );
