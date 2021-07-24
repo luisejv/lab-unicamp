@@ -6,11 +6,11 @@ const News = () => {
   return (
     <>
       <Head>
-        <title>Unicamp Lab | News</title>
+        <title>LEMAC | News</title>
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
+      <Container className="py-5">
         <h1>News</h1>
       </Container>
     </>

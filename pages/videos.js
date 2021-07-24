@@ -1,30 +1,31 @@
-import React from 'react';
-import Head from 'next/head';
-import { Container } from 'react-bootstrap';
+import React from "react";
+import Head from "next/head";
+import { Container } from "react-bootstrap";
 
 const Videos = () => {
   return (
     <>
       <Head>
-        <title>Unicamp Lab | Videos</title>
+        <title>LEMAC | Videos</title>
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
+      <Container className="py-5">
         <h1>Videos</h1>
         <section
-          style={{ display: 'flex', width: '100%', justifyContent: 'center' }}
+          className="my-5"
+          style={{ display: "flex", width: "100%", justifyContent: "center" }}
         >
           <iframe
-            width={'560'}
-            height={'315'}
-            src={'https://www.youtube.com/embed/zbfPVQ00KBM'}
-            title={'YouTube video player'}
-            frameborder={'0'}
+            width={"1170"}
+            height={"658"}
+            src={"https://www.youtube.com/embed/zbfPVQ00KBM"}
+            title={"YouTube video player"}
+            frameBorder={"0"}
             allow={
-              'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             }
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </section>
       </Container>

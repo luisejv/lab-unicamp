@@ -11,7 +11,7 @@ const Navbar = () => {
       </Row>
       <Row>
         <Link href="/" passHref={true}>
-          <Col className={"uniName"}>Universidad Campiñas Lab</Col>
+          <Col className={"uniName"}>LEMAC</Col>
         </Link>
       </Row>
       <NavbarOptions />

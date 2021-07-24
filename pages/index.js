@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Unicamp Lab | Home</title>
+        <title>LEMAC | Home</title>
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

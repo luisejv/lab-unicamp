@@ -1,7 +1,7 @@
 .card {
-  width: 200px;
-  height: 100px;
-  margin: 0px 0px;
+  width: 250px;
+  height: 250px;
+  margin: 10px 10px;
 }
 .body {
   /* background-image: url(../public/profile.png);
@@ -55,4 +55,5 @@
 }
 .Iso {
   display: flex !important;
+  flex-wrap: wrap;
 }

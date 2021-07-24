@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Container, Button } from 'react-bootstrap';
-import CardPeople from '../components/CardPeople';
-import IsoTopeGrid from 'react-isotope';
-import { Info } from '../info/peopleInfo';
-import Styles from '../styles/CardPeople.module.css';
+import React, { useState } from "react";
+import Head from "next/head";
+import { Container, Button, Row, Col, Table } from "react-bootstrap";
+import CardPeople from "../components/CardPeople";
+import Card from "react-bootstrap/Card";
+import IsoTopeGrid from "react-isotope";
+import { Info } from "../info/peopleInfo";
+import { alumniInfo } from "../info/alumniInfo";
+import Styles from "../styles/CardPeople.module.css";
 
 const People = () => {
   const filtersDefault = [
-    { label: 'All', isChecked: true },
-    { label: 'Pesq Colab', isChecked: false },
-    { label: 'PD', isChecked: false },
-    { label: 'Pesq Assoc', isChecked: false },
-    { label: 'Phd', isChecked: false },
-    { label: 'Master', isChecked: false },
-    { label: 'IC', isChecked: false },
+    { label: "All", isChecked: true },
+    { label: "Pesq Colab", isChecked: false },
+    { label: "PD", isChecked: false },
+    { label: "Pesq Assoc", isChecked: false },
+    { label: "Phd", isChecked: false },
+    { label: "Master", isChecked: false },
+    { label: "IC", isChecked: false },
   ];
   const [filters, updateFilters] = useState(filtersDefault);
   Info.map((person) => {
@@ -45,13 +47,13 @@ const People = () => {
   return (
     <>
       <Head>
-        <title>Unicamp Lab | People</title>
+        <title>LEMAC | People</title>
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
+      <Container className="py-5">
         <h1>People</h1>
-        <section style={{ marginBottom: '60px' }}>
+        <section style={{ marginBottom: "60px", height: "100%" }}>
           <div>
             {filters.map((e) => (
               <button key={`${e.label}_key`} className={Styles.filter}>
@@ -66,24 +68,53 @@ const People = () => {
               </button>
             ))}
           </div>
-          <div>
+          <div style={{ height: "140vh" }}>
             <IsoTopeGrid
               gridLayout={Info}
               noOfCols={4}
-              unitWidth={200}
-              unitHeight={100}
+              unitWidth={250}
+              unitHeight={250}
               filters={filters}
               className={Styles.Iso}
+              style={{ display: "flex" }}
             >
               {Info.map((person) => (
-                <CardPeople
-                  key={person.id}
-                  name={person.name}
-                  grade={person.filter[0]}
-                />
+                <div key={person.id}>
+                  <Card
+                    className={Styles.card}
+                    data-aos={"flip-up"}
+                    data-aos-easing={"ease-out-cubic"}
+                    // style={{ flexBasis: "33%" }}
+                  >
+                    <Card.Body className={Styles.body}>
+                      <h3 className={Styles.grade}>{person.filter[0]}</h3>
+                      <h1 className={Styles.name}>{person.name}</h1>
+                    </Card.Body>
+                  </Card>
+                </div>
               ))}
             </IsoTopeGrid>
           </div>
+          <Container className="my-5">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Supervision</th>
+                  <th>Current Activity</th>
+                </tr>
+              </thead>
+              <tbody>
+                {alumniInfo.map((alumni) => (
+                  <tr key={alumni.name}>
+                    <td>{alumni.name}</td>
+                    <td>{alumni.supervision}</td>
+                    <td>{alumni.currentActivity}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Container>
         </section>
       </Container>
     </>
