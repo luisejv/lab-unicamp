@@ -6,12 +6,15 @@ import NavbarOptions from "./NavbarOptions";
 const Navbar = () => {
   return (
     <Container className="pt-3">
-      <Row>
-        <Col md={5}>Universidad de Campiñas</Col>
-      </Row>
+      {/* <Row>
+        <Col md={5}>Universidad de Campinas</Col>
+      </Row> */}
       <Row>
         <Link href="/" passHref={true}>
-          <Col className={"uniName"}>LEMAC</Col>
+          <Col className={"uniName"}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="LEMAC" />
+          </Col>
         </Link>
       </Row>
       <NavbarOptions />

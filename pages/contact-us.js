@@ -40,6 +40,7 @@ const ContactUs = () => {
             {contacts.map((contact, idx) => (
               <Contact
                 key={"contact" + idx}
+                name={contact.name}
                 charge={contact.charge}
                 email={contact.email || ""}
                 office={contact.office}

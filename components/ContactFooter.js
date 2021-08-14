@@ -19,7 +19,12 @@ const ContactFooter = (props) => {
       </Col>
       <Col xs>
         <Row className="contactTitle">{props.title}</Row>
-        {props.address && <Row className="contactContent">{props.address}</Row>}
+        {props.address &&
+          props.address.split("\n").map((line, idx) => (
+            <Row key={"line" + idx} className="contactContent">
+              {line}
+            </Row>
+          ))}
         {props.link && (
           <Row as="a" className="contactLink">
             {props.link}

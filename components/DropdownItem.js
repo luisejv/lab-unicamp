@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import Styles from '../styles/Research.module.css';
-import { MdExpandLess } from 'react-icons/md';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
+import Styles from "../styles/Research.module.css";
+import { MdExpandLess } from "react-icons/md";
+// import Image from "next/image";
 
 const DropdownItem = ({ title, info, id, images }) => {
   const [active, setActive] = useState(true);
@@ -12,16 +12,16 @@ const DropdownItem = ({ title, info, id, images }) => {
       <Accordion>
         <Card
           style={{
-            borderLeft: 'transparent',
-            borderRight: 'transparent',
-            borderTop: 'transparent',
+            borderLeft: "transparent",
+            borderRight: "transparent",
+            borderTop: "transparent",
           }}
         >
           <Accordion.Toggle
             style={{
-              backgroundColor: 'transparent',
-              paddingBottom: '0',
-              paddingLeft: '0',
+              backgroundColor: "transparent",
+              paddingBottom: "0",
+              paddingLeft: "0",
             }}
             as={Card.Header}
             variant="link"
@@ -45,12 +45,14 @@ const DropdownItem = ({ title, info, id, images }) => {
               <section className={Styles.images}>
                 {images.map(
                   (image) =>
-                    image != '_' && (
-                      <Image
+                    image != "_" && (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
                         src={image}
                         height={250}
                         width={690}
-                        layout="intrinsic"
+                        // layout="intrinsic"
+                        alt=""
                       />
                     )
                 )}

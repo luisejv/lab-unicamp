@@ -1,10 +1,12 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ButtonBanner from "./ButtonBanner";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Hero = () => {
-  const [loadedText, setLoadedText] = React.useState(false);
+  const [loadedText, setLoadedText] = React.useState(true);
+
+  const image = React.useRef();
 
   const setBannerText = () => {
     setTimeout(() => {
@@ -12,12 +14,23 @@ const Hero = () => {
     }, 500);
   };
 
+  React.useEffect(() => {
+    if (image.current.complete) setBannerText();
+  }, []);
+
   return (
     <Container fluid className={"bannerContainer px-0"}>
       <Row className="w-100 h-100 no-gutters">
         <Col xs className="no-gutters bannerCol">
           <div className="heroOverlap"></div>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            ref={image}
+            src="/banner.jpg"
+            alt="banner"
+            className="heroImage"
+          />
+          {/* <Image
             src="/banner.jpg"
             alt="banner"
             layout="fill"
@@ -26,12 +39,13 @@ const Hero = () => {
             onLoad={() => {
               setBannerText();
             }}
-          />
+          /> */}
           {loadedText && (
-            <React.Fragment>
+            <Row className="bannerTextSection">
               <Row className="justify-content-center w-100 bannerAnimation">
                 <div className="bannerText">
-                  Welcome to Universidad de Campiñas&apos; Lab
+                  Welcome to Laboratory of Applied Electromagnetics and
+                  Computing
                 </div>
               </Row>
               <Row className="w-100 justify-content-center bannerAnimation">
@@ -39,7 +53,7 @@ const Hero = () => {
                 <ButtonBanner anchor="/people">The Team</ButtonBanner>
                 <ButtonBanner anchor="/publications">Publications</ButtonBanner>
               </Row>
-            </React.Fragment>
+            </Row>
           )}
         </Col>
       </Row>

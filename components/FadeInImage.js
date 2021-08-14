@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 
 const FadeInImage = (props) => {
   const [loaded, setLoaded] = React.useState(false);
@@ -24,7 +24,8 @@ const FadeInImage = (props) => {
       transition={{ ease: [0.215, 0.61, 0.355, 1], duration: 1.5 }}
     >
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
-      <Image {...props} onLoad={() => setLoaded(true)} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img {...props} onLoad={() => setLoaded(true)} />
     </motion.div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import ContactFooter from "./ContactFooter";
 import Link from "next/link";
-import { FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import { contacts, options } from "../info/footerInfo";
 
 const Footer = () => {
@@ -27,12 +27,12 @@ const Footer = () => {
                   <ContactFooter
                     type="phone"
                     title={"Phone"}
-                    link={"212-853-0953"}
+                    link={"+55 19 3521-3703"}
                   />
                   <ContactFooter
                     type="mail"
                     title={"Contact Us"}
-                    link={"ml3745@unicamp.edu.br"}
+                    link={"hugo@unicamp.br"}
                   />
                 </Col>
               </Row>
@@ -55,13 +55,26 @@ const Footer = () => {
               <FaTwitter
                 color="#0071b3"
                 style={{ cursor: "pointer", transform: "scale(1.5)" }}
-                className="mr-2 ml-2 mt-2"
+                className="m-2"
               />
               <FaYoutube
                 color="#0071b3"
                 style={{ cursor: "pointer", transform: "scale(1.5)" }}
-                className="ml-2 mt-2"
+                className="m-2"
               />
+              <a
+                href={
+                  "https://www.facebook.com/LEMAC-DECOM-FEEC-Unicamp-355407718423022"
+                }
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebook
+                  color="#0071b3"
+                  style={{ cursor: "pointer", transform: "scale(1.5)" }}
+                  className="m-2"
+                />
+              </a>
             </Col>
           </Row>
         </Container>

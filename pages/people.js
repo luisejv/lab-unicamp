@@ -68,7 +68,7 @@ const People = () => {
               </button>
             ))}
           </div>
-          <div style={{ height: "140vh" }}>
+          <div style={{ height: "1550px" }}>
             <IsoTopeGrid
               gridLayout={Info}
               noOfCols={4}
@@ -87,8 +87,20 @@ const People = () => {
                     // style={{ flexBasis: "33%" }}
                   >
                     <Card.Body className={Styles.body}>
-                      <h3 className={Styles.grade}>{person.filter[0]}</h3>
-                      <h1 className={Styles.name}>{person.name}</h1>
+                      {person.src && (
+                        /* eslint-disable-next-line @next/next/no-img-element */
+                        <img
+                          src={person.src}
+                          alt={person.name}
+                          height={250}
+                          width={250}
+                          // className="img-fluid"
+                        />
+                      )}
+                      <div className={Styles.bodyText}>
+                        <h3 className={Styles.grade}>{person.filter[0]}</h3>
+                        <h1 className={Styles.name}>{person.name}</h1>
+                      </div>
                     </Card.Body>
                   </Card>
                 </div>
