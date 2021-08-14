@@ -5,7 +5,6 @@ import Layout from "../components/Layout";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -16,9 +15,6 @@ function MyApp({ Component, pageProps }) {
   });
   return (
     <>
-      {/* <Head>
-        <link rel="icon" href="/LEMAC_logo.png" type="image/x-icon" />
-      </Head> */}
       <Layout>
         <Component {...pageProps} />
       </Layout>
