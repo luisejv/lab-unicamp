@@ -6,7 +6,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Hugo Hernandez Figueroa",
-    filter: ["Phd", "All"],
+    filter: ["Principal Investigator", "All"],
     src: "/hugo.jfif",
   },
   {
@@ -16,7 +16,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Gianni Masaki Tanaka Portela",
-    filter: ["PD", "All"],
+    filter: ["Post Doctoral Fellow", "All"],
     src: "/gianni.jpg",
   },
   {
@@ -26,7 +26,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Luciano Prado de Oliveira",
-    filter: ["Pesq Colab", "All"],
+    filter: ["Senior Research Scientist", "All"],
   },
   {
     id: "3",
@@ -35,7 +35,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Luz Ariovaldo Fabri Junior",
-    filter: ["Pesq Assoc", "All"],
+    filter: ["Associate Research Scientist", "All"],
   },
   {
     id: "4",
@@ -44,7 +44,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Adriano da Silva Ferreira",
-    filter: ["Pesq Assoc", "All"],
+    filter: ["Associate Research Scientist", "All"],
   },
   {
     id: "5",
@@ -53,7 +53,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Yesica Raquel Rumaldo Bustamente",
-    filter: ["Pesq Assoc", "All"],
+    filter: ["Associate Research Scientist", "All"],
   },
   {
     id: "6",
@@ -62,7 +62,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Gilliard Nardel Malheiros Silveira",
-    filter: ["Pesq Assoc", "All"],
+    filter: ["Associate Research Scientist", "All"],
   },
   {
     id: "7",
@@ -71,7 +71,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "José Angel Borda Hernández",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "8",
@@ -80,7 +80,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Juan Pablo Pantoja Bastidas",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "9",
@@ -89,7 +89,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Valquíria Lima Bessa de Castro",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "10",
@@ -98,7 +98,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Felício Harley Garcia de Castro",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "11",
@@ -107,7 +107,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Juliana de Almeida Góes",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "12",
@@ -116,7 +116,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Tadeu Pires Pasetto",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "13",
@@ -125,7 +125,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Ursula Fernanda Salazar Roggero",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "14",
@@ -134,7 +134,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Yuri Hayashi Isayama",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "15",
@@ -143,7 +143,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Jorge Rufino Fernández Herrera",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "16",
@@ -152,7 +152,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Francisco Teixeira Orlandini",
-    filter: ["Phd", "All"],
+    filter: ["Graduate Student PhD", "All"],
   },
   {
     id: "17",
@@ -161,7 +161,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Marlon de Souza Alcântara",
-    filter: ["Master", "All"],
+    filter: ["Graduate Student MSc", "All"],
   },
   {
     id: "18",
@@ -170,7 +170,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Gian Carlos Oré Huacles",
-    filter: ["Master", "All"],
+    filter: ["Graduate Student MSc", "All"],
   },
   {
     id: "19",
@@ -179,7 +179,7 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Rafaela Silveira Cardoso",
-    filter: ["Master", "All"],
+    filter: ["Graduate Student MSc", "All"],
   },
   {
     id: "20",
@@ -188,6 +188,6 @@ export const Info = [
     w: 1,
     h: 1,
     name: "Vitor de Oliveira Freire",
-    filter: ["IC", "All"],
+    filter: ["Undergrad ", "All"],
   },
 ];

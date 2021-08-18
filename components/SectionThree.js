@@ -32,8 +32,20 @@ const SectionThree = () => {
     <Row className="mt-4">
       <Col>
         <SectionHeader>News</SectionHeader>
-        <Row className="pt-5 borderSection">
-          {news.map((newIter, idx) => (
+        <Row className="pt-5 borderSection justify-content-center">
+          <Col xs={6}>
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLEMAC-DECOM-FEEC-Unicamp-355407718423022&tabs=timeline&width=750&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="750"
+              height="500"
+              style={{ border: "none", overflow: "hidden" }}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </Col>
+          {/* {news.map((newIter, idx) => (
             <Col key={"new" + idx}>
               <Card
                 style={{ width: "100%", height: "500px", cursor: "pointer" }}
@@ -48,7 +60,7 @@ const SectionThree = () => {
                 </Card.Body>
               </Card>
             </Col>
-          ))}
+          ))} */}
         </Row>
       </Col>
     </Row>

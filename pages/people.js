@@ -11,12 +11,13 @@ import Styles from "../styles/CardPeople.module.css";
 const People = () => {
   const filtersDefault = [
     { label: "All", isChecked: true },
-    { label: "Pesq Colab", isChecked: false },
-    { label: "PD", isChecked: false },
-    { label: "Pesq Assoc", isChecked: false },
-    { label: "Phd", isChecked: false },
-    { label: "Master", isChecked: false },
-    { label: "IC", isChecked: false },
+    { label: "Principal Investigator", isChecked: false },
+    { label: "Senior Research Scientist", isChecked: false },
+    { label: "Post Doctoral Fellow", isChecked: false },
+    { label: "Associate Research Scientist", isChecked: false },
+    { label: "Graduate Student PhD", isChecked: false },
+    { label: "Graduate Student MSc", isChecked: false },
+    { label: "Undergrad ", isChecked: false },
   ];
   const [filters, updateFilters] = useState(filtersDefault);
   Info.map((person) => {
@@ -94,7 +95,6 @@ const People = () => {
                           alt={person.name}
                           height={250}
                           width={250}
-                          // className="img-fluid"
                         />
                       )}
                       <div className={Styles.bodyText}>

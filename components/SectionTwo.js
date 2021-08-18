@@ -16,7 +16,9 @@ const SectionTwo = () => {
     }))
     .slice(0, 4);
 
-  const recentPublication = publications[0];
+  const recentPublications = publications
+    .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
+    .slice(0, 2);
 
   return (
     <Row className="mt-5 sectionTwo">
@@ -50,19 +52,23 @@ const SectionTwo = () => {
             <div className="section2Header">Recent Publication</div>
           </Col>
         </Row>
-        <Row className="py-3">
-          <Col>
-            <a
-              href={recentPublication.link}
-              target="_blank"
-              rel="noreferrer"
-              className="projectTitle"
-            >
-              {recentPublication.title}
-            </a>
-            <p className="projectContent">{recentPublication.cite}</p>
-          </Col>
-        </Row>
+        {recentPublications.map((iter, idx) => {
+          return (
+            <Row key={"publi" + idx} className="py-3">
+              <Col>
+                <a
+                  href={iter.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="projectTitle"
+                >
+                  {iter.title}
+                </a>
+                <p className="projectContent">{iter.cite}</p>
+              </Col>
+            </Row>
+          );
+        })}
         <Link href="/publications">
           <a className="textBlue1">See full list of publications</a>
         </Link>

@@ -39,29 +39,30 @@ const SectionOne = () => {
           </Col>
         </Row>
         <Row className="mt-5">
-          <Col className="text-center">
+          <Col xs={12} md={6} className="text-center">
             <iframe
               width="100%"
-              height="200"
-              src="https://www.youtube.com/embed/fg3eFuYmVEw"
+              height="300"
+              // src="https://www.youtube.com/embed/fg3eFuYmVEw"
+              src="https://www.youtube.com/embed/zbfPVQ00KBM"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </Col>
-          <Col className="text-center">
+          <Col xs={12} md={6} className="text-center">
             <iframe
               width="100%"
-              height="200"
-              src="https://www.youtube.com/embed/RVO7LYs_Y1s"
+              height="300"
+              src="https://www.youtube.com/embed/JWrBTyorXnM"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </Col>
-          <Col className="text-center">
+          {/* <Col className="text-center">
             <iframe
               width="100%"
               height="200"
@@ -71,7 +72,7 @@ const SectionOne = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </Col>
+          </Col> */}
         </Row>
       </Col>
     </Row>

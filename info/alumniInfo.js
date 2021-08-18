@@ -4,7 +4,6 @@ export const alumniInfo = [
     supervision: "Postdocs",
     currentActivity: "Retired Associate Professor - PUCC, Campinas-SP.",
   },
-
   {
     name: "Irina Dimitrova Sirkova",
     supervision: "Postdocs",
