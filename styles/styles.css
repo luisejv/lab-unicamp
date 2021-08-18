@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .textBlue1 {
   color: #3a6fa2;
@@ -11,7 +11,7 @@
 .uniName {
   color: #3a6fa2;
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
   padding: 10px 0px;
 }
@@ -43,7 +43,7 @@
 }
 
 .heroOverlap:before {
-  content: "";
+  content: '';
   opacity: 0.4;
   background-color: black;
   position: absolute;
@@ -87,7 +87,7 @@
 .bannerText {
   color: white;
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   z-index: 2;
   text-align: center;
   margin: 10px 0;
@@ -101,7 +101,7 @@
 .mainContainer .mainHeader {
   color: #0071b3;
   font-size: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   justify-content: center;
   padding: 15px 0;
 }
@@ -220,5 +220,150 @@
     -ms-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
+  }
+}
+@media screen and (max-width: 425px) {
+  .navbarOption {
+    font-size: 10px;
+    width: 25% !important;
+    padding: 0px 0px 0px !important;
+  }
+  .navRes {
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+  }
+  .contactTitle {
+    font-size: 10px !important;
+  }
+  .contactContent {
+    font-size: 8px !important;
+  }
+  .contactLink {
+    font-size: 10px !important;
+  }
+  .footerOption {
+    font-size: 10px !important;
+    margin-left: 0px !important;
+  }
+  .icon {
+    transform: scale(0.8) !important;
+  }
+  .dis {
+    display: none !important;
+  }
+  .aaa {
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    margin-bottom: 10px !important;
+  }
+  .py-5 {
+    padding-top: 10px !important;
+  }
+  .video {
+    height: 200px !important;
+  }
+  .ads {
+    font-size: 8px !important;
+  }
+  .charge {
+    font-size: 12px;
+    margin-top: 20px !important;
+  }
+  .name {
+    font-size: 10px;
+  }
+  .map {
+    height: 200px !important;
+  }
+  .heroImage {
+    height: 220px;
+    width: 100%;
+  }
+  .logo {
+    width: 100px;
+    height: 50px;
+  }
+  .bannerText {
+    font-size: 15px;
+    width: 100%;
+  }
+  .bannerTextSection {
+    width: 100%;
+  }
+  .buttonBanner {
+    border: 1px solid #fff;
+    font-size: 9px;
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+  .bannerContainer {
+    height: 220px;
+    width: 100%;
+  }
+  .mainHeader {
+    font-size: 15px !important;
+    margin: 0 0 !important;
+  }
+  .text {
+    font-size: 10px !important;
+  }
+  .mainContainer {
+    padding: 20px 0 0 !important;
+  }
+  .mainContainer p {
+    line-height: 20px;
+  }
+  .asdd {
+    padding: 1 1 !important;
+    margin: 0 0 !important;
+  }
+  .projectTitle {
+    font-size: 13px !important;
+  }
+  .projectContent {
+    font-size: 10px !important;
+    margin: 5px 5px !important;
+  }
+  .sectionTwo {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 !important;
+  }
+  .textBlue1 {
+    font-size: 10px !important;
+  }
+  .mmm {
+    margin-top: 10px !important;
+  }
+  .sectionHeader {
+    font-size: 15px !important;
+    text-align: center !important;
+  }
+  .new {
+    height: 100% !important;
+  }
+  .New {
+    margin: 10px !important;
+  }
+  .textBlue1 {
+    font-size: 12px !important;
+  }
+  .date {
+    font-size: 10px !important;
+    text-align: center !important;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .navbarOption {
+    font-size: 20px;
+  }
+  .charge {
+    font-size: 25px;
+  }
+  .name {
+    font-size: 15px;
   }
 }

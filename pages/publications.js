@@ -10,6 +10,8 @@ import {
 } from "react-bootstrap";
 import { Info } from "../info/publicationInfo";
 import PublicationItem from "../components/PublicationItem";
+import Styles2 from "../styles/Research.module.css";
+
 const Publications = () => {
   const [publications, setPublications] = React.useState([
     ...Info.sort((a, b) => b.timestamp - a.timestamp),
@@ -77,7 +79,7 @@ const Publications = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className="my-5">
+      <Container className={Styles2.title1 + " py-md-5"}>
         <Row>
           <Col xs={9}>
             <h1>Publications</h1>

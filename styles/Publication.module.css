@@ -21,3 +21,11 @@
   font-size: 1rem;
   font-weight: 400;
 }
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 10px !important;
+  }
+  .cite {
+    font-size: 8px !important;
+  }
+}

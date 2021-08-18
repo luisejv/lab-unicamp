@@ -1,8 +1,9 @@
-import React from "react";
-import Head from "next/head";
-import { Container } from "react-bootstrap";
-import DropdownItem from "../components/DropdownItem";
-import { Info } from "../info/researchInfo";
+import React from 'react';
+import Head from 'next/head';
+import { Container } from 'react-bootstrap';
+import DropdownItem from '../components/DropdownItem';
+import { Info } from '../info/researchInfo';
+import Styles from '../styles/Research.module.css';
 
 const Research = () => {
   return (
@@ -12,12 +13,12 @@ const Research = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className="py-5">
+      <Container className={Styles.title1 + ' py-md-5'}>
         <h1>Research</h1>
-        <section style={{ marginBottom: "60px" }}>
+        <section className="content" style={{ marginBottom: '60px' }}>
           {Info.map((info, idx) => (
             <DropdownItem
-              key={"item" + idx}
+              key={'item' + idx}
               title={info.title}
               info={info.info}
               id={idx}

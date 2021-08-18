@@ -7,7 +7,7 @@ import IsoTopeGrid from "react-isotope";
 import { Info } from "../info/peopleInfo";
 import { alumniInfo } from "../info/alumniInfo";
 import Styles from "../styles/CardPeople.module.css";
-
+import Styles2 from "../styles/Research.module.css";
 const People = () => {
   const filtersDefault = [
     { label: "All", isChecked: true },
@@ -52,9 +52,12 @@ const People = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className="py-5">
+      <Container className={Styles2.title1 + " py-md-5"}>
         <h1>People</h1>
-        <section style={{ marginBottom: "60px", height: "100%" }}>
+        <section
+          className="content"
+          style={{ marginBottom: "60px", height: "100%" }}
+        >
           <div>
             {filters.map((e) => (
               <button key={`${e.label}_key`} className={Styles.filter}>
@@ -95,6 +98,8 @@ const People = () => {
                           alt={person.name}
                           height={250}
                           width={250}
+                          style={{ overflow: "hidden" }}
+                          className={Styles.images + " img-fluid"}
                         />
                       )}
                       <div className={Styles.bodyText}>

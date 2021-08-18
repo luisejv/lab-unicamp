@@ -30,7 +30,7 @@ const SectionTwo = () => {
         </Row>
         {activeProjects.map((project, iter) => (
           <Row
-            className="py-3"
+            className="py-1 py-md-3"
             key={"project" + iter}
             onClick={() => {
               router.push("/research");
@@ -46,15 +46,15 @@ const SectionTwo = () => {
           <a className="textBlue1">See full list of projects</a>
         </Link>
       </Col>
-      <Col xs={12} md={4}>
-        <Row className="my-1">
+      <Col className="mmm" xs={12} md={4}>
+        <Row className="my-md-1">
           <Col>
             <div className="section2Header">Recent Publication</div>
           </Col>
         </Row>
         {recentPublications.map((iter, idx) => {
           return (
-            <Row key={"publi" + idx} className="py-3">
+            <Row key={"publi" + idx} className="py-1 py-md-3">
               <Col>
                 <a
                   href={iter.link}

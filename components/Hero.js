@@ -1,6 +1,6 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import ButtonBanner from "./ButtonBanner";
+import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import ButtonBanner from './ButtonBanner';
 // import Image from "next/image";
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <Container fluid className={"bannerContainer px-0"}>
+    <Container fluid className={'bannerContainer px-0'}>
       <Row className="w-100 h-100 no-gutters">
         <Col xs className="no-gutters bannerCol">
           <div className="heroOverlap"></div>
@@ -44,8 +44,8 @@ const Hero = () => {
             <Row className="bannerTextSection">
               <Row className="justify-content-center w-100 bannerAnimation">
                 <div className="bannerText">
-                  Welcome to Laboratory of Applied Electromagnetics and
-                  Computing
+                  Welcome to Laboratory of <br></br>Applied Electromagnetics{' '}
+                  <br></br>and Computing
                 </div>
               </Row>
               <Row className="w-100 justify-content-center bannerAnimation">

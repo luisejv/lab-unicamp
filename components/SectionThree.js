@@ -29,7 +29,7 @@ const SectionThree = () => {
     },
   ];
   return (
-    <Row className="mt-4">
+    <Row className="asdd mt-4">
       <Col>
         <SectionHeader>News</SectionHeader>
         <Row className="pt-5 borderSection justify-content-center">
@@ -48,13 +48,14 @@ const SectionThree = () => {
           {/* {news.map((newIter, idx) => (
             <Col key={"new" + idx}>
               <Card
-                style={{ width: "100%", height: "500px", cursor: "pointer" }}
+                className="new"
+                style={{ width: '100%', height: '500px', cursor: 'pointer' }}
                 onClick={() => router.push(newIter.url)}
               >
                 <Card.Img variant="top" src={newIter.photo} />
                 <Card.Body>
                   <Card.Title className="textBlue1">{newIter.title}</Card.Title>
-                  <Card.Text style={{ textAlign: "left" }}>
+                  <Card.Text className="date" style={{ textAlign: 'left' }}>
                     {newIter.date}
                   </Card.Text>
                 </Card.Body>
