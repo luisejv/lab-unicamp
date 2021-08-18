@@ -1,9 +1,9 @@
-import React from 'react';
-import { Col, Row, Container } from 'react-bootstrap';
-import ContactFooter from './ContactFooter';
-import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { contacts, options } from '../info/footerInfo';
+import React from "react";
+import { Col, Row, Container } from "react-bootstrap";
+import ContactFooter from "./ContactFooter";
+import Link from "next/link";
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { contacts, options } from "../info/footerInfo";
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
                   {contacts.map((contact, idx) => (
                     <ContactFooter
                       type="marker"
-                      key={'contact' + idx}
+                      key={"contact" + idx}
                       title={contact.title}
                       address={contact.address}
                     />
@@ -26,13 +26,13 @@ const Footer = () => {
                 <Col md={5} className="text-center">
                   <ContactFooter
                     type="phone"
-                    title={'Phone'}
-                    link={'+55 19 3521-3703'}
+                    title={"Phone"}
+                    link={"+55 19 3521-3703"}
                   />
                   <ContactFooter
                     type="mail"
-                    title={'Contact Us'}
-                    link={'hugo@unicamp.br'}
+                    title={"Contact Us"}
+                    link={"hugo@unicamp.br"}
                   />
                 </Col>
               </Row>
@@ -54,24 +54,24 @@ const Footer = () => {
               <div className="dis">Follow us</div>
               <FaTwitter
                 color="#0071b3"
-                style={{ cursor: 'pointer', transform: 'scale(1.5)' }}
+                style={{ cursor: "pointer", transform: "scale(1.5)" }}
                 className="m-2"
               />
               <FaYoutube
                 color="#0071b3"
-                style={{ cursor: 'pointer', transform: 'scale(1.5)' }}
+                style={{ cursor: "pointer", transform: "scale(1.5)" }}
                 className="m-2"
               />
               <a
                 href={
-                  'https://www.facebook.com/LEMAC-DECOM-FEEC-Unicamp-355407718423022'
+                  "https://www.facebook.com/LEMAC-DECOM-FEEC-Unicamp-355407718423022"
                 }
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaFacebook
                   color="#0071b3"
-                  style={{ cursor: 'pointer', transform: 'scale(1.5)' }}
+                  style={{ cursor: "pointer", transform: "scale(1.5)" }}
                   className="m-2"
                 />
               </a>
@@ -79,7 +79,12 @@ const Footer = () => {
           </Row>
         </Container>
       </Container>
-      <div className="footer"></div>
+      <div className="footer py-3">
+        <Container>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/unicamp.png" height="100" width="100" alt="Unicamp" />
+        </Container>
+      </div>
     </React.Fragment>
   );
 };

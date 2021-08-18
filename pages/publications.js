@@ -16,10 +16,8 @@ const Publications = () => {
   const [publications, setPublications] = React.useState([
     ...Info.sort((a, b) => b.timestamp - a.timestamp),
   ]);
-  const [itemsPerPage, setItemsPerPage] = React.useState(10);
-  const [numberOfPages, setNumberOfPages] = React.useState(
-    Math.ceil(Info.length / itemsPerPage)
-  );
+  const [itemsPerPage] = React.useState(10);
+  const [numberOfPages] = React.useState(Math.ceil(Info.length / itemsPerPage));
   const [pages, setPages] = React.useState([]);
   const [activePage, setActivePage] = React.useState(0);
 
