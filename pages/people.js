@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import Head from "next/head";
-import { Container, Button, Row, Col, Table } from "react-bootstrap";
-import CardPeople from "../components/CardPeople";
-import Card from "react-bootstrap/Card";
-import IsoTopeGrid from "react-isotope";
-import { Info } from "../info/peopleInfo";
-import { alumniInfo } from "../info/alumniInfo";
-import Styles from "../styles/CardPeople.module.css";
-
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { Container, Button, Row, Col, Table } from 'react-bootstrap';
+import CardPeople from '../components/CardPeople';
+import Card from 'react-bootstrap/Card';
+import IsoTopeGrid from 'react-isotope';
+import { Info } from '../info/peopleInfo';
+import { alumniInfo } from '../info/alumniInfo';
+import Styles from '../styles/CardPeople.module.css';
+import Styles2 from '../styles/Research.module.css';
 const People = () => {
   const filtersDefault = [
-    { label: "All", isChecked: true },
-    { label: "Pesq Colab", isChecked: false },
-    { label: "PD", isChecked: false },
-    { label: "Pesq Assoc", isChecked: false },
-    { label: "Phd", isChecked: false },
-    { label: "Master", isChecked: false },
-    { label: "IC", isChecked: false },
+    { label: 'All', isChecked: true },
+    { label: 'Pesq Colab', isChecked: false },
+    { label: 'PD', isChecked: false },
+    { label: 'Pesq Assoc', isChecked: false },
+    { label: 'Phd', isChecked: false },
+    { label: 'Master', isChecked: false },
+    { label: 'IC', isChecked: false },
   ];
   const [filters, updateFilters] = useState(filtersDefault);
   Info.map((person) => {
@@ -51,9 +51,12 @@ const People = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className="py-5">
+      <Container className={Styles2.title1 + ' py-md-5'}>
         <h1>People</h1>
-        <section style={{ marginBottom: "60px", height: "100%" }}>
+        <section
+          className="content"
+          style={{ marginBottom: '60px', height: '100%' }}
+        >
           <div>
             {filters.map((e) => (
               <button key={`${e.label}_key`} className={Styles.filter}>
@@ -68,7 +71,7 @@ const People = () => {
               </button>
             ))}
           </div>
-          <div style={{ height: "1550px" }}>
+          <div style={{ height: '1550px' }}>
             <IsoTopeGrid
               gridLayout={Info}
               noOfCols={4}
@@ -76,14 +79,14 @@ const People = () => {
               unitHeight={250}
               filters={filters}
               className={Styles.Iso}
-              style={{ display: "flex" }}
+              style={{ display: 'flex' }}
             >
               {Info.map((person) => (
                 <div key={person.id}>
                   <Card
                     className={Styles.card}
-                    data-aos={"flip-up"}
-                    data-aos-easing={"ease-out-cubic"}
+                    data-aos={'flip-up'}
+                    data-aos-easing={'ease-out-cubic'}
                     // style={{ flexBasis: "33%" }}
                   >
                     <Card.Body className={Styles.body}>
@@ -94,7 +97,8 @@ const People = () => {
                           alt={person.name}
                           height={250}
                           width={250}
-                          // className="img-fluid"
+                          style={{ overflow: 'hidden' }}
+                          className={Styles.images + ' img-fluid'}
                         />
                       )}
                       <div className={Styles.bodyText}>

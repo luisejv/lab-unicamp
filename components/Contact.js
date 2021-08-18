@@ -1,28 +1,33 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import React from 'react';
+import { Col, Row } from 'react-bootstrap';
 
 const Contact = ({ charge, name, email, phone, office }) => {
   return (
-    <Row className="mb-5">
+    <Row className="mb-md-5">
       <Col>
         <Row className="my-1">
-          <h4 style={{ color: "#00294a" }}>{charge}</h4>
+          <h4 className="charge" style={{ color: '#00294a' }}>
+            {charge}
+          </h4>
         </Row>
         <Row className="my-1">
-          <strong>{name}</strong>
+          <strong className="name">{name}</strong>
         </Row>
         {email && (
           <Row className="my-1">
-            <strong className="mr-1">E-mail:</strong> <span>{email}</span>
+            <strong className="name mr-1">E-mail:</strong>{' '}
+            <span className="name">{email}</span>
           </Row>
         )}
         {phone && (
           <Row className="my-1">
-            <strong className="mr-1">Phone:</strong> <span>{phone}</span>
+            <strong className="name mr-1">Phone:</strong>{' '}
+            <span className="name">{phone}</span>
           </Row>
         )}
         <Row className="my-1">
-          <strong className="mr-1">Office:</strong> <span>{office}</span>
+          <strong className="name mr-1">Office:</strong>{' '}
+          <span className="name">{office}</span>
         </Row>
       </Col>
     </Row>

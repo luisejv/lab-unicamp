@@ -1,8 +1,9 @@
-import React from "react";
-import Head from "next/head";
-import { Col, Container, Row } from "react-bootstrap";
-import { Info } from "../info/publicationInfo";
-import PublicationItem from "../components/PublicationItem";
+import React from 'react';
+import Head from 'next/head';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Info } from '../info/publicationInfo';
+import PublicationItem from '../components/PublicationItem';
+import Styles2 from '../styles/Research.module.css';
 const Publications = () => {
   return (
     <>
@@ -11,9 +12,9 @@ const Publications = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className="my-5">
+      <Container className={Styles2.title1 + ' py-md-5'}>
         <h1>Publications</h1>
-        <Container style={{ marginBottom: "60px" }}>
+        <Container style={{ marginBottom: '60px' }}>
           <Row>
             <Col md={8}>
               {Info.map((publi, idx) => (

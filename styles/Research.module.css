@@ -50,3 +50,27 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 425px) {
+  .title1 h1 {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .title1 {
+    padding-top: 10px !important;
+  }
+  .title {
+    font-size: 10px !important;
+  }
+  .infoo {
+    font-size: 10px !important;
+  }
+  .id {
+    font-size: 5px !important;
+  }
+  .icon {
+    transform: scale(1) rotate(90deg) !important;
+  }
+  .iconDown {
+    transform: scale(1) rotate(180deg) !important;
+  }
+}
