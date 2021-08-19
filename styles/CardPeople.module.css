@@ -2,6 +2,7 @@
   width: 250px;
   height: 250px;
   margin: 10px 10px;
+  cursor: pointer;
 }
 .body {
   /* background-image: url(../public/profile.png);

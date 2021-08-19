@@ -1,28 +1,26 @@
-import React, { useState } from "react";
-import Head from "next/head";
-import { Container, Button, Row, Col, Table } from "react-bootstrap";
-import CardPeople from "../components/CardPeople";
-import Card from "react-bootstrap/Card";
-import IsoTopeGrid from "react-isotope";
-import { Info } from "../info/peopleInfo";
-import { alumniInfo } from "../info/alumniInfo";
-import Styles from "../styles/CardPeople.module.css";
-import Styles2 from "../styles/Research.module.css";
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { Container, Table } from 'react-bootstrap';
+import { useRouter } from 'next/router';
+import Card from 'react-bootstrap/Card';
+import IsoTopeGrid from 'react-isotope';
+import { Info } from '../../info/peopleInfo';
+import { alumniInfo } from '../../info/alumniInfo';
+import Styles from '../../styles/CardPeople.module.css';
+import Styles2 from '../../styles/Research.module.css';
 const People = () => {
   const filtersDefault = [
-    { label: "All", isChecked: true },
-    { label: "Principal Investigator", isChecked: false },
-    { label: "Senior Research Scientist", isChecked: false },
-    { label: "Post Doctoral Fellow", isChecked: false },
-    { label: "Associate Research Scientist", isChecked: false },
-    { label: "Graduate Student PhD", isChecked: false },
-    { label: "Graduate Student MSc", isChecked: false },
-    { label: "Undergrad ", isChecked: false },
+    { label: 'All', isChecked: true },
+    { label: 'Principal Investigator', isChecked: false },
+    { label: 'Senior Research Scientist', isChecked: false },
+    { label: 'Post Doctoral Fellow', isChecked: false },
+    { label: 'Associate Research Scientist', isChecked: false },
+    { label: 'Graduate Student PhD', isChecked: false },
+    { label: 'Graduate Student MSc', isChecked: false },
+    { label: 'Undergrad ', isChecked: false },
   ];
   const [filters, updateFilters] = useState(filtersDefault);
-  Info.map((person) => {
-    console.log(person.name, person.filter[0], person.id);
-  });
+  const router = useRouter();
   const onFilter = (event) => {
     const {
       target: { value, checked },
@@ -52,11 +50,11 @@ const People = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className={Styles2.title1 + " py-md-5"}>
+      <Container className={Styles2.title1 + ' py-md-5'}>
         <h1>People</h1>
         <section
           className="content"
-          style={{ marginBottom: "60px", height: "100%" }}
+          style={{ marginBottom: '60px', height: '100%' }}
         >
           <div>
             {filters.map((e) => (
@@ -72,7 +70,7 @@ const People = () => {
               </button>
             ))}
           </div>
-          <div style={{ height: "1550px" }}>
+          <div style={{ height: '1550px' }}>
             <IsoTopeGrid
               gridLayout={Info}
               noOfCols={4}
@@ -80,15 +78,15 @@ const People = () => {
               unitHeight={250}
               filters={filters}
               className={Styles.Iso}
-              style={{ display: "flex" }}
+              style={{ display: 'flex' }}
             >
               {Info.map((person) => (
                 <div key={person.id}>
                   <Card
                     className={Styles.card}
-                    data-aos={"flip-up"}
-                    data-aos-easing={"ease-out-cubic"}
-                    // style={{ flexBasis: "33%" }}
+                    data-aos={'flip-up'}
+                    data-aos-easing={'ease-out-cubic'}
+                    onClick={() => router.push(`/people/${person.id}`)}
                   >
                     <Card.Body className={Styles.body}>
                       {person.src && (
@@ -98,8 +96,8 @@ const People = () => {
                           alt={person.name}
                           height={250}
                           width={250}
-                          style={{ overflow: "hidden" }}
-                          className={Styles.images + " img-fluid"}
+                          style={{ overflow: 'hidden' }}
+                          className={Styles.images + ' img-fluid'}
                         />
                       )}
                       <div className={Styles.bodyText}>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .textBlue1 {
   color: #3a6fa2;
@@ -11,7 +11,7 @@
 .uniName {
   color: #3a6fa2;
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
   padding: 10px 0px;
 }
@@ -43,7 +43,7 @@
 }
 
 .heroOverlap:before {
-  content: "";
+  content: '';
   opacity: 0.4;
   background-color: black;
   position: absolute;
@@ -87,7 +87,7 @@
 .bannerText {
   color: white;
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   z-index: 2;
   text-align: center;
   margin: 10px 0;
@@ -101,7 +101,7 @@
 .mainContainer .mainHeader {
   color: #0071b3;
   font-size: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   justify-content: center;
   padding: 15px 0;
 }
@@ -185,7 +185,37 @@
   height: 130px;
   background-color: #0071b3;
 }
-
+.peoplePosition {
+  font-size: 1.3rem;
+  color: rgb(97, 96, 96);
+}
+.colF {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.colF2 {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.peopleImage {
+  width: 300px;
+}
+.peopleDescription {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: rgb(97, 96, 96);
+}
+.peopleTitleFooter {
+  margin-top: 30px;
+}
 @keyframes bannerIntro {
   0% {
     -moz-transform: translateY(-20px);
@@ -355,6 +385,28 @@
     font-size: 10px !important;
     text-align: center !important;
   }
+  .peopleDescription {
+    margin-top: 30px;
+    font-size: 0.5rem;
+  }
+  .colF2 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+  .peopleTitle {
+    font-size: 1rem;
+  }
+  .peoplePosition,
+  .peopleTitleFooter {
+    font-size: 0.6rem;
+  }
+  .peopleTitleFooter {
+    align-self: start;
+  }
 }
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .navbarOption {
@@ -365,5 +417,29 @@
   }
   .name {
     font-size: 15px;
+  }
+  .peopleDescription {
+    font-size: 0.9rem;
+  }
+  .colF2 {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+  .peopleTitle {
+    font-size: 2rem;
+  }
+  .peoplePosition,
+  .peopleTitleFooter {
+    font-size: 1.1rem;
+  }
+  .peopleTitleFooter {
+    align-self: start;
+  }
+  .peopleImage {
+    width: 100%;
   }
 }
