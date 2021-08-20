@@ -1,7 +1,7 @@
 .card {
   width: 250px;
   height: 250px;
-  margin: 10px 10px;
+  /* margin: 10px 10px; */
   cursor: pointer;
 }
 .body {
@@ -69,32 +69,34 @@
   background-color: transparent;
   cursor: pointer;
 }
-.Iso {
-  display: flex !important;
-  flex-wrap: wrap;
+
+.Iso > div {
+  justify-self: center;
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+@media screen and (max-width: 576px) {
   .card {
-    width: 200px;
-    height: 200px;
+    height: 230px;
+    width: 230px;
   }
 }
+
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  .Iso div {
+  /* .Iso div {
     width: 50px !important;
     height: 50px !important;
-  }
-  .Iso {
+  } */
+  /* .Iso {
     width: 50px !important;
     height: 50px !important;
-  }
-  .card {
+  } */
+  /* .card {
     width: 50px;
     height: 50px;
     margin: 0px 00px;
-  }
-  .image {
+  } */
+  /* .image {
     width: 50px;
     height: 50px;
-  }
+  } */
 }

@@ -11,7 +11,7 @@ const Footer = () => {
       <Container fluid className="subfooter">
         <Container className="py-3">
           <Row>
-            <Col md={9}>
+            <Col xs={9}>
               <Row>
                 <Col sm={12} md={7}>
                   {contacts.map((contact, idx) => (
@@ -37,7 +37,7 @@ const Footer = () => {
                 </Col>
               </Row>
             </Col>
-            <Col md={2} className="pt-3 text-left">
+            <Col xs={2} className="pt-3 text-left">
               {options.map((option) => {
                 return (
                   <Link passHref href={option.href} key={option.name}>

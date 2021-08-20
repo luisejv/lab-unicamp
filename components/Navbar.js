@@ -1,32 +1,34 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import Link from 'next/link';
-import NavbarOptions from './NavbarOptions';
-import styles from '../styles/NavbarResponsive.module.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import Link from "next/link";
+import NavbarOptions from "./NavbarOptions";
+import styles from "../styles/NavbarResponsive.module.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [isOpen, setisOpen] = React.useState(false);
   return (
     <React.Fragment>
-      <Container className={styles.navBar + ' pt-md-3'}>
-        <Row>
+      <Container className={styles.navBar + " pt-md-3"}>
+        <Row className="align-items-center">
           <Link href="/" passHref={true}>
-            <Col className={'uniName'}>
+            <Col className={"uniName"}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="logo" src="/logo.png" alt="LEMAC" />
             </Col>
           </Link>
+          <Col xs={2}>
+            <div className={styles.mobileIcon} onClick={() => setisOpen(true)}>
+              <FaBars />
+            </div>
+          </Col>
         </Row>
-        <div className={styles.mobileIcon} onClick={() => setisOpen(true)}>
-          <FaBars />
-        </div>
         <NavbarOptions />
       </Container>
       <aside
         className={styles.sideBar}
         style={{
-          opacity: isOpen ? '100%' : '0',
-          top: isOpen ? '0' : '-100%',
+          opacity: isOpen ? "100%" : "0",
+          top: isOpen ? "0" : "-100%",
         }}
       >
         <div className={styles.icon} onClick={() => setisOpen(false)}>

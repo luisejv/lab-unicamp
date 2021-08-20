@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .textBlue1 {
   color: #3a6fa2;
@@ -11,7 +11,7 @@
 .uniName {
   color: #3a6fa2;
   font-size: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   padding: 10px 0px;
 }
@@ -43,7 +43,7 @@
 }
 
 .heroOverlap:before {
-  content: '';
+  content: "";
   opacity: 0.4;
   background-color: black;
   position: absolute;
@@ -87,7 +87,7 @@
 .bannerText {
   color: white;
   font-size: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   z-index: 2;
   text-align: center;
   margin: 10px 0;
@@ -101,9 +101,10 @@
 .mainContainer .mainHeader {
   color: #0071b3;
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   justify-content: center;
   padding: 15px 0;
+  text-align: center;
 }
 
 .mainContainer p {
@@ -153,6 +154,7 @@
 
 .contactTitle {
   font-size: 16px;
+  font-weight: bolder;
 }
 
 .contactContent {
@@ -212,6 +214,7 @@
   margin-top: 40px;
   font-size: 1rem;
   color: rgb(97, 96, 96);
+  text-align: justify;
 }
 .peopleTitleFooter {
   margin-top: 30px;
@@ -311,9 +314,11 @@
   .heroImage {
     height: 220px;
     width: 100%;
+    -webkit-animation: none;
+    animation: none;
   }
   .logo {
-    width: 100px;
+    /* width: 100px; */
     height: 50px;
   }
   .bannerText {
@@ -333,9 +338,9 @@
     height: 220px;
     width: 100%;
   }
-  .mainHeader {
+  .mainContainer .mainHeader {
     font-size: 15px !important;
-    margin: 0 0 !important;
+    margin: 0 auto !important;
   }
   .text {
     font-size: 10px !important;
@@ -441,5 +446,18 @@
   }
   .peopleImage {
     width: 100%;
+  }
+  .bannerText {
+    font-size: 25px;
+    width: 100%;
+  }
+  .buttonBanner {
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+  .heroImage {
+    -webkit-animation: none;
+    animation: none;
   }
 }

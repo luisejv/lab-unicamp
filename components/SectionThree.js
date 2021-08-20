@@ -3,9 +3,12 @@ import SectionHeader from "./SectionHeader";
 import { Col, Row, Card } from "react-bootstrap";
 import format from "date-fns/format";
 import { useRouter } from "next/dist/client/router";
+import useWidth from "../context/useWidth";
 
 const SectionThree = () => {
   const router = useRouter();
+  const { width: windowWidth } = useWidth();
+  const [width, setWidth] = React.useState(windowWidth);
   const news = [
     {
       title:
@@ -28,23 +31,31 @@ const SectionThree = () => {
       url: "/",
     },
   ];
+
+  React.useEffect(() => {
+    setWidth(windowWidth);
+  }, [windowWidth]);
+
   return (
     <Row className="asdd mt-4">
       <Col>
         <SectionHeader>News</SectionHeader>
         <Row className="pt-5 borderSection justify-content-center">
-          <Col xs={6}>
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLEMAC-DECOM-FEEC-Unicamp-355407718423022&tabs=timeline&width=750&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-              width="750"
-              height="500"
-              style={{ border: "none", overflow: "hidden" }}
-              scrolling="no"
-              frameBorder="0"
-              allowFullScreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe>
-          </Col>
+          {/* <Col xs={6}> */}
+          <iframe
+            src={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLEMAC-DECOM-FEEC-Unicamp-355407718423022&tabs=timeline&width=${
+              width < 600 ? 300 : 500
+            }&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId`}
+            width={width < 600 ? 300 : 500}
+            height="500"
+            style={{ border: "none", overflow: "hidden" }}
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+
+          {/* </Col> */}
           {/* {news.map((newIter, idx) => (
             <Col key={"new" + idx}>
               <Card

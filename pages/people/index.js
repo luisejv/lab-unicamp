@@ -1,26 +1,33 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Container, Table } from 'react-bootstrap';
-import { useRouter } from 'next/router';
-import Card from 'react-bootstrap/Card';
-import IsoTopeGrid from 'react-isotope';
-import { Info } from '../../info/peopleInfo';
-import { alumniInfo } from '../../info/alumniInfo';
-import Styles from '../../styles/CardPeople.module.css';
-import Styles2 from '../../styles/Research.module.css';
+import React, { useState } from "react";
+import Head from "next/head";
+import { Container, Table } from "react-bootstrap";
+import { useRouter } from "next/router";
+import Card from "react-bootstrap/Card";
+import IsoTopeGrid from "react-isotope";
+import { Info } from "../../info/peopleInfo";
+import { alumniInfo } from "../../info/alumniInfo";
+import Styles from "../../styles/CardPeople.module.css";
+import Styles2 from "../../styles/Research.module.css";
+import useWidth from "../../context/useWidth";
+
 const People = () => {
+  const { width: windowWidth } = useWidth();
+  const [width, setWidth] = React.useState(windowWidth);
+  const [people, setPeople] = React.useState(Info);
+  const [gridSize, setGridSize] = React.useState({ rows: 0, cols: 4 });
   const filtersDefault = [
-    { label: 'All', isChecked: true },
-    { label: 'Principal Investigator', isChecked: false },
-    { label: 'Senior Research Scientist', isChecked: false },
-    { label: 'Post Doctoral Fellow', isChecked: false },
-    { label: 'Associate Research Scientist', isChecked: false },
-    { label: 'Graduate Student PhD', isChecked: false },
-    { label: 'Graduate Student MSc', isChecked: false },
-    { label: 'Undergrad ', isChecked: false },
+    { label: "All", isChecked: true },
+    { label: "Principal Investigator", isChecked: false },
+    { label: "Senior Research Scientist", isChecked: false },
+    { label: "Post Doctoral Fellow", isChecked: false },
+    { label: "Associate Research Scientist", isChecked: false },
+    { label: "Graduate Student PhD", isChecked: false },
+    { label: "Graduate Student MSc", isChecked: false },
+    { label: "Undergrad ", isChecked: false },
   ];
   const [filters, updateFilters] = useState(filtersDefault);
   const router = useRouter();
+
   const onFilter = (event) => {
     const {
       target: { value, checked },
@@ -43,6 +50,54 @@ const People = () => {
       })
     );
   };
+
+  const sortInfo = (maxCol) => {
+    const newPeople = [];
+    let x = 0;
+    let y = 0;
+    for (let person of Info) {
+      if (y === maxCol) {
+        x += 1;
+        y = 0;
+      }
+      newPeople.push({ ...person, row: x, col: y });
+      y += 1;
+    }
+    setGridSize({ rows: x, cols: maxCol });
+    setPeople(newPeople);
+  };
+
+  React.useEffect(() => {
+    setWidth(windowWidth);
+    if (windowWidth < 515) {
+      sortInfo(1);
+    }
+    if (windowWidth < 992 && windowWidth >= 515) {
+      sortInfo(2);
+    }
+    if (windowWidth < 1200 && windowWidth >= 992) {
+      sortInfo(3);
+    }
+    if (windowWidth >= 1200) {
+      sortInfo(4);
+    }
+  }, [windowWidth]);
+
+  React.useEffect(() => {
+    if (width < 515) {
+      sortInfo(1);
+    }
+    if (width < 992 && width >= 576) {
+      sortInfo(2);
+    }
+    if (width < 1200 && width >= 992) {
+      sortInfo(3);
+    }
+    if (width >= 1200) {
+      sortInfo(4);
+    }
+  }, [width]);
+
   return (
     <>
       <Head>
@@ -50,11 +105,11 @@ const People = () => {
         <meta name="description" content="Unicamp Lab" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className={Styles2.title1 + ' py-md-5'}>
+      <Container className={Styles2.title1 + " py-md-5"}>
         <h1>People</h1>
         <section
           className="content"
-          style={{ marginBottom: '60px', height: '100%' }}
+          style={{ marginBottom: "60px", height: "100%" }}
         >
           <div>
             {filters.map((e) => (
@@ -70,22 +125,26 @@ const People = () => {
               </button>
             ))}
           </div>
-          <div style={{ height: '1550px' }}>
+          <div
+            style={{
+              height: (gridSize.rows + 1) * 260 + "px",
+            }}
+          >
             <IsoTopeGrid
-              gridLayout={Info}
-              noOfCols={4}
-              unitWidth={250}
-              unitHeight={250}
+              gridLayout={people}
+              noOfCols={gridSize.cols}
+              unitHeight={width < 576 ? 240 : 250}
+              unitWidth={width < 576 ? 240 : 250}
               filters={filters}
               className={Styles.Iso}
-              style={{ display: 'flex' }}
+              isFitWidth
             >
               {Info.map((person) => (
                 <div key={person.id}>
                   <Card
                     className={Styles.card}
-                    data-aos={'flip-up'}
-                    data-aos-easing={'ease-out-cubic'}
+                    data-aos={"flip-up"}
+                    data-aos-easing={"ease-out-cubic"}
                     onClick={() => router.push(`/people/${person.id}`)}
                   >
                     <Card.Body className={Styles.body}>
@@ -96,8 +155,8 @@ const People = () => {
                           alt={person.name}
                           height={250}
                           width={250}
-                          style={{ overflow: 'hidden' }}
-                          className={Styles.images + ' img-fluid'}
+                          style={{ overflow: "hidden" }}
+                          className={Styles.images + " img-fluid"}
                         />
                       )}
                       <div className={Styles.bodyText}>
@@ -115,15 +174,22 @@ const People = () => {
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Supervision</th>
+                  {width >= 426 && <th>Supervision</th>}
                   <th>Current Activity</th>
                 </tr>
               </thead>
               <tbody>
                 {alumniInfo.map((alumni) => (
                   <tr key={alumni.name}>
-                    <td>{alumni.name}</td>
-                    <td>{alumni.supervision}</td>
+                    <td>
+                      {alumni.name}
+                      {width < 426 && (
+                        <>
+                          <br /> <strong>{alumni.supervision}</strong>
+                        </>
+                      )}
+                    </td>
+                    {width >= 426 && <td>{alumni.supervision}</td>}
                     <td>{alumni.currentActivity}</td>
                   </tr>
                 ))}

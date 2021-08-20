@@ -56,11 +56,11 @@
 @media screen and (max-width: 768px) {
   .mobileIcon {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 20px; */
+    /* transform: translate(-100%, 60%); */
+    font-size: 0.5rem;
     cursor: pointer;
   }
   .navBarMenu {

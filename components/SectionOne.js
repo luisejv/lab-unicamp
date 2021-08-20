@@ -1,5 +1,5 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import React from "react";
+import { Col, Row } from "react-bootstrap";
 // import Image from "next/image";
 
 const SectionOne = () => {
@@ -9,7 +9,7 @@ const SectionOne = () => {
         <Row className="mainHeader">
           Welcome to Laboratory of Applied Electromagnetics and Computing
         </Row>
-        <Row className="pt-md-4 h-100 px-md-3">
+        <Row className="pt-md-4 h-100 px-md-3 align-items-center">
           <Col
             xs={12}
             md={7}
