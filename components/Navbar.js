@@ -8,21 +8,26 @@ const Navbar = () => {
   const [isOpen, setisOpen] = React.useState(false);
   return (
     <React.Fragment>
-      <Container className={styles.navBar + " pt-md-3"}>
-        <Row className="align-items-center">
-          <Link href="/" passHref={true}>
+      <Container fluid className={styles.navBar + " pt-md-3"}>
+        <Container>
+          <Row className="align-items-center">
             <Col className={"uniName"}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="logo" src="/logo.png" alt="LEMAC" />
+              <Link href="/" passHref={true}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="logo" src="/logo.png" alt="LEMAC" />
+              </Link>
             </Col>
-          </Link>
-          <Col xs={2}>
-            <div className={styles.mobileIcon} onClick={() => setisOpen(true)}>
-              <FaBars />
-            </div>
-          </Col>
-        </Row>
-        <NavbarOptions />
+            <Col xs={2}>
+              <div
+                className={styles.mobileIcon}
+                onClick={() => setisOpen(true)}
+              >
+                <FaBars />
+              </div>
+            </Col>
+          </Row>
+          <NavbarOptions />
+        </Container>
       </Container>
       <aside
         className={styles.sideBar}

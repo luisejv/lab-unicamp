@@ -48,6 +48,13 @@
   color: black;
   cursor: pointer;
 }
+.navBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+}
 @media screen and (max-width: 480px) {
   .sideBarMenu {
     grid-template-rows: repeat(7, 60px);

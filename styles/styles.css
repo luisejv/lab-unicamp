@@ -12,8 +12,11 @@
   color: #3a6fa2;
   font-size: 50px;
   font-family: "Roboto", sans-serif;
-  cursor: pointer;
   padding: 10px 0px;
+}
+
+.uniName img {
+  cursor: pointer;
 }
 
 .navbarOption {

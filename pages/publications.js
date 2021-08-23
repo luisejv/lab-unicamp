@@ -27,11 +27,11 @@ const Publications = () => {
       pagesToSet.push(i);
     }
     setPages(pagesToSet);
-    console.log(pages);
+    // console.log(pages);
   }, []);
 
   const sortAlphabeticallly = (sortKey) => {
-    console.log("az", sortKey);
+    // console.log("az", sortKey);
     if (sortKey) {
       setPublications([
         ...Info.sort((a, b) => {
@@ -57,17 +57,17 @@ const Publications = () => {
         }),
       ]);
     }
-    console.log(publications);
+    // console.log(publications);
   };
 
   const sortByTimestamp = (sortKey) => {
-    console.log("time", sortKey);
+    // console.log("time", sortKey);
     if (sortKey) {
       setPublications([...Info.sort((a, b) => b.timestamp - a.timestamp)]);
     } else {
       setPublications([...Info.sort((a, b) => a.timestamp - b.timestamp)]);
     }
-    console.log(publications);
+    // console.log(publications);
   };
 
   return (

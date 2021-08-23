@@ -7,7 +7,7 @@ const SectionOne = () => {
     <Row className="asdd h-100 w-100">
       <Col xs className="asdd h-100">
         <Row className="mainHeader">
-          Welcome to Laboratory of Applied Electromagnetics and Computing
+          Welcome to Laboratory of Applied and Computational Electromagnetics
         </Row>
         <Row className="pt-md-4 h-100 px-md-3 align-items-center">
           <Col

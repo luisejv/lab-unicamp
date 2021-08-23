@@ -44,8 +44,8 @@ const Hero = () => {
             <Row noGutters className="bannerTextSection">
               <Row className="justify-content-center w-100 bannerAnimation">
                 <div className="bannerText">
-                  Welcome to Laboratory of <br></br>Applied Electromagnetics{" "}
-                  <br></br>and Computing
+                  Welcome to Laboratory of <br></br>Applied and Computational
+                  <br></br> Electromagnetics
                 </div>
               </Row>
               <Row className="w-100 justify-content-center bannerAnimation">
