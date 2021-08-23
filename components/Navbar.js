@@ -35,7 +35,7 @@ const Navbar = () => {
           <FaTimes className={styles.closeIcon} />
         </div>
         <div className={styles.sideBarWrapper}>
-          <div className={styles.sideBarMenu}>
+          <div className={styles.sideBarMenu} onClick={() => setisOpen(false)}>
             <Link className={styles.sideBarLink} href="/research">
               Research
             </Link>

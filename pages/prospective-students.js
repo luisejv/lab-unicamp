@@ -14,7 +14,7 @@ const ProspectiveStudents = () => {
         <h1>Prospective Students</h1>
         <Row>
           <Col>
-            <p className="ads  mt-5 text-justify">
+            <p className="ads mt-5 text-justify">
               We host undergraduate and graduate students, as well as
               postdoctoral researchers, for the realization of projects related
               to our research interests. The researchers can obtain funding for

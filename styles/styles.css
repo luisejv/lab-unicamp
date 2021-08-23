@@ -298,7 +298,8 @@
   .video {
     height: 200px !important;
   }
-  .ads {
+  .ads,
+  .ads a {
     font-size: 8px !important;
   }
   .charge {
