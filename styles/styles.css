@@ -59,7 +59,7 @@
 
 .bannerTextSection {
   position: absolute;
-  top: 20%;
+  top: 15%;
   z-index: 2;
 }
 
@@ -214,10 +214,9 @@
   width: 300px;
 }
 .peopleDescription {
-  margin-top: 40px;
   font-size: 1rem;
   color: rgb(97, 96, 96);
-  text-align: justify;
+  text-align: left;
 }
 .peopleTitleFooter {
   margin-top: 30px;
@@ -260,7 +259,7 @@
 }
 @media screen and (max-width: 425px) {
   .navbarOption {
-    font-size: 10px;
+    font-size: 12px;
     width: 25% !important;
     padding: 0px 0px 0px !important;
   }
@@ -270,16 +269,16 @@
     justify-content: center;
   }
   .contactTitle {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .contactContent {
     font-size: 8px !important;
   }
   .contactLink {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .footerOption {
-    font-size: 10px !important;
+    font-size: 12px !important;
     margin-left: 0px !important;
   }
   .icon {
@@ -304,6 +303,9 @@
   .ads,
   .ads a {
     font-size: 8px !important;
+  }
+  a {
+    font-size: 10px !important;
   }
   .charge {
     font-size: 12px;
@@ -402,7 +404,7 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center !important;
+    align-items: flex-start !important;
     padding-left: 25px !important;
     padding-right: 25px !important;
   }

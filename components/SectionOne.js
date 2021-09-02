@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 // import Image from "next/image";
@@ -13,13 +14,16 @@ const SectionOne = () => {
           <Col
             xs={12}
             md={7}
-            className="pr-md-3 py-md-3 pl-md-0 d-flex flex-column justify-content-center text-justify"
+            className="pr-md-3 py-md-3 pl-md-0 d-flex flex-column justify-content-center text-left"
           >
             <p className="text">
               The Laboratory of Applied and Computational Electromagnetics
-              (LEMAC), headed by Prof. Dr. Hugo Enrique Hernandez Figueroa, is
-              part of the School of Electrical and Computer Engineering (FEEC)
-              at the University of Campinas (UNICAMP).
+              (LEMAC), headed by{" "}
+              <Link href="/people/0">
+                Prof. Dr. Hugo Enrique Hernandez Figueroa
+              </Link>
+              , is part of the School of Electrical and Computer Engineering
+              (FEEC) at the University of Campinas (UNICAMP).
             </p>
             <p className="text">
               The research activities carried out at LEMAC/UNICAMP are related

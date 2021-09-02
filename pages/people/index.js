@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import { Container, Table } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Card from "react-bootstrap/Card";
 import IsoTopeGrid from "react-isotope";
@@ -23,7 +23,8 @@ const People = () => {
     { label: "Associate Research Scientist", isChecked: false },
     { label: "Graduate Student PhD", isChecked: false },
     { label: "Graduate Student MSc", isChecked: false },
-    { label: "Undergrad ", isChecked: false },
+    { label: "Undergrad", isChecked: false },
+    { label: "Faculty Member", isChecked: false },
   ];
   const [filters, updateFilters] = useState(filtersDefault);
   const router = useRouter();
@@ -170,31 +171,40 @@ const People = () => {
             </IsoTopeGrid>
           </div>
           <Container className="my-5">
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  {width >= 426 && <th>Supervision</th>}
-                  <th>Current Activity</th>
-                </tr>
-              </thead>
-              <tbody>
-                {alumniInfo.map((alumni) => (
-                  <tr key={alumni.name}>
-                    <td>
-                      {alumni.name}
-                      {width < 426 && (
-                        <>
-                          <br /> <strong>{alumni.supervision}</strong>
-                        </>
-                      )}
-                    </td>
-                    {width >= 426 && <td>{alumni.supervision}</td>}
-                    <td>{alumni.currentActivity}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
+            <Row className="mb-3">
+              <Col>
+                <h1>Alumni</h1>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Table striped bordered hover>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      {width >= 426 && <th>Supervision</th>}
+                      <th>Current Activity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {alumniInfo.map((alumni) => (
+                      <tr key={alumni.name}>
+                        <td>
+                          {alumni.name}
+                          {width < 426 && (
+                            <>
+                              <br /> <strong>{alumni.supervision}</strong>
+                            </>
+                          )}
+                        </td>
+                        {width >= 426 && <td>{alumni.supervision}</td>}
+                        <td>{alumni.currentActivity}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </Col>
+            </Row>
           </Container>
         </section>
       </Container>
